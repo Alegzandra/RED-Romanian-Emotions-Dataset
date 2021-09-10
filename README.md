@@ -16,7 +16,7 @@ To protect confidentiality of Twitter users, we removed usernames and also prope
 
 If you use this dataset in your reasearch, please cite:  
 
-```bash
+```text
 A. Ciobotaru, L.P. Dinu, RED: A Novel Dataset for Romanian Emotion Detection from Tweets, Proceedings of the International Conference on Recent Advances in Natural Language Processing (RANLP 2021), ACL Anthology.
 ```
 and in BibTex format: 
