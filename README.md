@@ -12,6 +12,17 @@ This dataset contains tweets in Romanian labelled with the emotions: Anger (Furi
 
 To protect confidentiality of Twitter users, we removed usernames and also proper names from this dataset.  
 
+# Docker
+
+To try a BERT-based emotion detecton model trained on RED dataset you can download the docker image from: 
+
+Intructions for use, if you have Docker installed:
+
+```docker
+docker load -i get_emotion.tar.gz
+docker run -t -i get-emotion
+```
+
 # Credits
 
 If you use this dataset in your reasearch, please cite:  
