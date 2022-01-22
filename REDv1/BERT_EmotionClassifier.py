@@ -1,9 +1,6 @@
 from torch import nn, optim
 from transformers import BertModel, BertTokenizer, AdamW, get_linear_schedule_with_warmup
 
-
-#PRE_TRAINED_MODEL_NAME = 'dumitrescustefan/bert-base-romanian-cased-v1'
-
 class EmotionsClassifier(nn.Module):
   def __init__(self, n_classes, model_name):
     super(EmotionsClassifier, self).__init__()
