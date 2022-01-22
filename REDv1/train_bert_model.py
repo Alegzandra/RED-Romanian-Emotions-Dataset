@@ -34,22 +34,13 @@ print(df_train.shape, df_test.shape, df_val.shape)
 #plt.show()
 
 class_names=["Bucurie", "Furie", "Frica", "Tristete", "Neutru"]
-#texts_train = df_train.content.tolist()
-#texts_val = df_val.content.tolist()
-#texts_test = df_test.content.tolist()
 
-#labvels must be of type int
+#labels must be of type int
 label_encoder = LabelEncoder()
 
 df_train.Emotion = label_encoder.fit_transform(df_train.Emotion)
 df_val.Emotion = label_encoder.transform(df_val.Emotion)
 df_test.Emotion = label_encoder.transform(df_test.Emotion)
-
-#emotions_train = label_encoder.fit_transform(df_train.emotion)
-#emotions_val = label_encoder.transform(df_val.emotion)
-#emotions_test = label_encoder.transform(df_test.emotion)
-#print(df_test.Emotion)
-
 
 def create_data_loader(df, tokenizer, max_len, batch_size):
   ds = RED(
@@ -177,7 +168,7 @@ for epoch in range(EPOCHS):
   history['val_loss'].append(val_loss)
 
   if val_acc > best_accuracy:
-    torch.save(model.state_dict(), 'best_model_state_new.bin')
+    torch.save(model.state_dict(), 'best_model_state_new5.bin')
     best_accuracy = val_acc
 
 plt.plot(history['train_acc'], label='train accuracy')
