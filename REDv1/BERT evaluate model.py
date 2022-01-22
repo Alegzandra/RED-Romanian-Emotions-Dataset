@@ -35,7 +35,7 @@ model.load_state_dict(torch.load('best_model_state_new5.bin', map_location=torch
 model = model.to(device)
 
 #deschid datele de test
-df_test = pd.read_csv("test.csv")
+df_test = pd.read_csv(r"/RED data/test.csv")
 
 label_encoder = LabelEncoder()
 df_test.Emotion = label_encoder.fit_transform(df_test.Emotion)
