@@ -25,9 +25,9 @@ EPOCHS = 5
 BATCH_SIZE = 8
 MAX_LEN = 100
 
-df_train = pd.read_csv(r"D:\WFH\untitled\venv\new\train.csv")
-df_val = pd.read_csv(r"D:\WFH\untitled\venv\new\val.csv")
-df_test = pd.read_csv(r"D:\WFH\untitled\venv\new\test.csv")
+df_train = pd.read_csv(r"\RED data\train.csv")
+df_val = pd.read_csv(r"\RED data\val.csv")
+df_test = pd.read_csv(r"\RED data\test.csv")
 print(df_train.shape, df_test.shape, df_val.shape)
 
 #df[["content", "emotion"]].groupby("emotion").count().plot(kind="bar")
