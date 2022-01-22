@@ -25,7 +25,6 @@ MAX_LEN = 100
 
 #denumirea emotiilor in ordine alfabetica
 class_names=["Bucurie", "Frica", "Furie", "Neutru", "Tristete"]
-#class_names=["bucurie", "furie", "frica", "tristete", "neutral"]
 
 PRE_TRAINED_MODEL_NAME = 'dumitrescustefan/bert-base-romanian-cased-v1'
 tokenizer = BertTokenizer.from_pretrained(PRE_TRAINED_MODEL_NAME)
@@ -36,15 +35,9 @@ model.load_state_dict(torch.load('best_model_state_new5.bin', map_location=torch
 model = model.to(device)
 
 #deschid datele de test
-#df_train = pd.read_csv("dataset/RED_train.csv")
-#df_val = pd.read_csv("dataset/RED_val.csv")
-#df_test = pd.read_csv("dataset/RED_test.csv")
-df_test = pd.read_csv(r"D:\WFH\untitled\venv\new\test.csv")
+df_test = pd.read_csv("test.csv")
 
 label_encoder = LabelEncoder()
-#potrivim encoderul pe datele de train?
-#df_train.emotion = label_encoder.fit_transform(df_train.emotion)
-#df_val.emotion = label_encoder.transform(df_val.emotion)
 df_test.Emotion = label_encoder.fit_transform(df_test.Emotion)
 
 #creez data loader
@@ -161,7 +154,7 @@ emotions_test = df_test.Emotion
 print("emotions_test", emotions_test)
 #creez obiectul model bert
 bert_model = Bert_model(model, label_encoder, tokenizer, MAX_LEN)
-#creez vectorul de predictiile modelului pe tweet-urile de test
+#creez vectorul de predictii ale modelului pe tweet-urile de test
 bert_predictions = bert_model.detect_emotions_with_labels(texts_test)
 print('bert_predictions', bert_predictions, len(bert_predictions))
 y_true = label_encoder.inverse_transform(emotions_test)
