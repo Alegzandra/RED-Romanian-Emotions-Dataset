@@ -1,31 +1,16 @@
-# RED-Romanian-Emotions-Dataset
+# RED-Romanian-Emotions-Datasets
 
-This dataset contains tweets in Romanian labelled with the emotions: Anger (Furie), Fear (Frică), Joy (Bucurie), Sadness (Tristețe) and also Neutral (Neutru), split in 3237 tweets for training, 405 tweets for validation and 405 tweets for testing. 
+These datasets contain tweets in Romanian labelled with the emotions: Anger (Furie), Fear (Frică), Joy (Bucurie), Sadness (Tristețe),  Surprise (Surpriză), Trust (Încredere), and also Neutral (Neutru). To protect confidentiality of Twitter users, we removed usernames and also proper names from these datasets.  
 
-| Class Name | No. of labelled tweets |
-| ------- | --- | 
-| Anger | 807 | 
-| Fear | 778 |
-| Joy | 876 |
-| Sadness | 781 |
-| Neutral | 805 |
+## RED-v1 
+Contains Romanian tweets annotated for Anger, Fear, Joy, Sadness and Neutral and is single-label.
 
-To protect confidentiality of Twitter users, we removed usernames and also proper names from this dataset.  
+## RED-multilabel
+Contains Romanian tweets annotated for one or more of the following emotions: Anger, Fear, Joy, Sadness, Surprise, Trust and Neutral.  
 
-# Docker
-
-To try a BERT-based emotion detecton model trained on RED dataset you can download the docker image from: 
-
-Intructions for use, if you have Docker installed:
-
-```docker
-docker load -i get_emotion.tar.gz
-docker run -t -i get-emotion
-```
 
 # Credits
-
-If you use this dataset in your reasearch, please cite:  
+If you use RED-v1 in your reasearch, please cite:  
 
 ```text
 A. Ciobotaru, L.P. Dinu, RED: A Novel Dataset for Romanian Emotion Detection from Tweets, Proceedings of the International Conference on Recent Advances in Natural Language Processing (RANLP 2021).
