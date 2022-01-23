@@ -14,7 +14,7 @@ To protect confidentiality of Twitter users, we removed usernames and also prope
 
 # Create an emotion detection model
 
-To try a BERT-based emotion detecton model trained on RED dataset you can train your own model using train_bert_model.py and the train/test/val split provided in RED data folder.
+To try a BERT-based emotion detecton model trained on RED dataset you can train your own model using train_bert_model.py and the train/test/val split provided in the RED data folder.
 
 # Credits
 
