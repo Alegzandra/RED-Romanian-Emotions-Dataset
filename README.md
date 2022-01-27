@@ -5,7 +5,7 @@ These datasets contain tweets in Romanian labelled with the emotions: Anger (Fur
 ## RED-v1 
 Contains Romanian tweets annotated for Anger, Fear, Joy, Sadness and Neutral and is single-label.
 
-## RED-multilabel
+## RED-v2
 Contains Romanian tweets annotated for one or more of the following emotions: Anger, Fear, Joy, Sadness, Surprise, Trust and Neutral.  
 
 
