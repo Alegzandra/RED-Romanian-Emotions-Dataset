@@ -1,12 +1,10 @@
-![version](https://img.shields.io/badge/version-2-red)
-
-# RED - Romanian Emotions Datasets
+# RED - Romanian Emotions Datasets v2
 
 We release the second version of the Romanian Emotions Dataset (RED) containing **5449 tweets** annotated in a **multi-label** fashion with the following **7 emotions**: _Anger_ (Furie), _Fear_ (Frică), Joy (_Bucurie_), Sadness (Tristețe),  _Surprise_ (Surpriză), _Trust_ (Încredere) and _Neutral_ (Neutru).
 
 We provide anonymized tweets: we removed usernames and [proper nouns](https://github.com/dumitrescustefan/roner) from the dataset. 
 
-REDv2 is based on REDv1, which is a smaller dataset, single-labeled with 5 emotions (Anger, Fear, Joy, Sadness and Neutral). For compatibility purposes, we keep v1 in the [REDv1](REDv1) folder. If you use REDv1 in your research, please see its [orginal readme](REDv1\readme.md).
+REDv2 is based on REDv1, which is a smaller dataset, single-labeled with 5 emotions (Anger, Fear, Joy, Sadness and Neutral). 
 
 # Format
 
