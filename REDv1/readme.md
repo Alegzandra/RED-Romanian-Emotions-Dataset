@@ -1,4 +1,4 @@
-# RED-Romanian-Emotions-Dataset
+# RED - Romanian Emotions Dataset v1
 
 This dataset contains tweets in Romanian labelled with the emotions: Anger (Furie), Fear (Frică), Joy (Bucurie), Sadness (Tristețe) and also Neutral (Neutru), split in 3237 tweets for training, 405 tweets for validation and 405 tweets for testing. 
 
