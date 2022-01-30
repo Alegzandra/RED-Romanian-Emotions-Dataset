@@ -1,0 +1,8 @@
+{
+    "test_accuracy_score": 0.5574572086334229,
+    "test_hamming_loss": 0.10426126420497894,
+    "test_mse": 24.450490951538086,
+    "valid_accuracy_score": 0.5432780981063843,
+    "valid_hamming_loss": 0.10470928996801376,
+    "valid_mse": 24.515872955322266
+}
