@@ -344,4 +344,7 @@ if __name__ == "__main__":
     with open("results_{}_regression_{}.json".format(args.model_name.replace("/", "_"), args.regression), "w") as f:
         json.dump(result, f, indent=4, sort_keys=True)
 
-    print(result)
+    print("REDv2 averaged test results:")
+    print("_"*80+"\n")
+    from pprint import pprint
+    pprint(result)

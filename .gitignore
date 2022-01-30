@@ -1,6 +1,6 @@
-evaluation/results*
-evaluation/wandb/
-evaluation/lightning_logs/
+REDv2/evaluation/result*
+REDv2/evaluation/wandb/
+REDv2/evaluation/lightning_logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
