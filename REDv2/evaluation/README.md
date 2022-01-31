@@ -1,6 +1,6 @@
 # REDv2 Evaluation 
 
-We test the evaluation script in 2 settings (categorical and regression) with default parameters, and average results over 5 iterations. Results are shown below:
+We test the evaluation script in 2 settings (categorical and regression) with default parameters, and average results over 5 runs with random seed. Results are shown below:
 
 | Model                         	| Setting        	| Hamming Loss 	| Accuracy 	|  MSE  	|
 |-------------------------------	|----------------	|:------------:	|:--------:	|:-----:	|
@@ -12,6 +12,8 @@ We test the evaluation script in 2 settings (categorical and regression) with de
 | xlm-roberta                   	| Regression     	|     0.102    	|   0.546  	| 10.06 	|
 | readerbench/RoGPT2-base         | Classification  |               |     |     |
 | readerbench/RoGPT2-base         | Regression      |     0.108     |   0.506   | 12.49   |
+| readerbench/RoGPT2-medium         | Classification  |               |     |     |
+| readerbench/RoGPT2-medium         | Regression      |          |      |    |
 
 
 
