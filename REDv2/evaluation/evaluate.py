@@ -30,13 +30,17 @@ class TransformerModel(pl.LightningModule):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.config = AutoConfig.from_pretrained(model_name, output_hidden_states=True)
         self.model = AutoModel.from_pretrained(model_name, config=self.config)
+        
+        hidden_size = self.get_hidden_size()
+        print(f"\tDetected hidden size is {hidden_size}")
+        
         self.dropout = nn.Dropout(0.1)
-        self.linear = nn.Linear(768, 7)
+        self.linear = nn.Linear(hidden_size, 7)
         self.regression_target = regression_target
 
         self.multilabel_loss = nn.BCEWithLogitsLoss()
-        self.regression_loss = nn.MSELoss() #nn.SmoothL1Loss()
-
+        self.regression_loss = nn.MSELoss() 
+        
         self.lr = lr
         self.model_max_length = model_max_length
 
@@ -44,8 +48,37 @@ class TransformerModel(pl.LightningModule):
         self.valid_y, self.valid_y_hat, self.valid_yr_hat, self.valid_loss = [], [], [], []
         self.test_y, self.test_y_hat, self.test_yr_hat, self.test_loss = [], [], [], []
 
-        self.cnt = 0
+        # add pad token
+        self.validate_pad_token()
+    
+    def validate_pad_token(self):
+        if self.tokenizer.pad_token is not None:
+            return
+        if self.tokenizer.sep_token is not None:
+            print(f"\tNo PAD token detected, automatically assigning the SEP token as PAD.")
+            self.tokenizer.pad_token = self.tokenizer.sep_token
+            return
+        if self.tokenizer.eos_token is not None:
+            print(f"\tNo PAD token detected, automatically assigning the EOS token as PAD.")
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+            return
+        if self.tokenizer.bos_token is not None:
+            print(f"\tNo PAD token detected, automatically assigning the BOS token as PAD.")
+            self.tokenizer.pad_token = self.tokenizer.bos_token
+            return
+        if self.tokenizer.cls_token is not None:
+            print(f"\tNo PAD token detected, automatically assigning the CLS token as PAD.")
+            self.tokenizer.pad_token = self.tokenizer.cls_token
+            return
+        raise Exception("Could not detect SEP/EOS/BOS/CLS tokens, and thus could not assign a PAD token which is required.")
 
+    
+    def get_hidden_size(self):    
+        inputs = self.tokenizer("text", return_tensors="pt")
+        outputs = self.model(**inputs)
+        return outputs.last_hidden_state.size(-1)
+
+    
     def forward(self, texts):
         encoded_texts = self.model(input_ids=texts["input_ids"].to(self.device), attention_mask=texts["attention_mask"].to(self.device), return_dict=True)
         encoded_texts = encoded_texts.last_hidden_state  # [batch_size, seq_len, hidden_size]
@@ -236,7 +269,8 @@ class MyDataset(Dataset):
             labels.append(instance["labels"])
             labels_regression.append(instance["labels_regression"])
 
-        texts = self.tokenizer(texts, padding=True, max_length=512, truncation=True, return_tensors="pt")
+        texts = self.tokenizer(texts, padding=
+        True, max_length=512, truncation=True, return_tensors="pt")
         labels = torch.tensor(labels, dtype=torch.float)
         labels_regression = torch.tensor(labels_regression, dtype=torch.float)
 
@@ -268,6 +302,7 @@ if __name__ == "__main__":
                              labels=[],
                              regression_target=args.regression
                              )
+        
 
     print("Loading data...")
     train_dataset = MyDataset(tokenizer=model.tokenizer, file_path="../data/train.json")
@@ -313,7 +348,7 @@ if __name__ == "__main__":
             #limit_val_batches=2,
             accumulate_grad_batches=args.accumulate_grad_batches,
             gradient_clip_val=1.0,
-            checkpoint_callback=False
+            enable_checkpointing=False
         )
         trainer.fit(model, train_dataloader, val_dataloader)
 
