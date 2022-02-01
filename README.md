@@ -6,7 +6,7 @@ The Romanian Emotions Dataset is a Twitter based dataset annotated with emotions
 
 |       	|      Link     	| # of tweets 	| # of emotions 	|  Annotation  	| Release Date 	|
 |-------	|:-------------:	|:-------------:	|:-------------:	|:------------:	|:------------:	|
-| ![version](https://img.shields.io/badge/RED-v1-red) | [Data & Readme](REDv1) 	| 4047 |       5       	| Single label 	|  Sep 2021     	|
+| ![version](https://img.shields.io/badge/RED-v1-red) | [Data & Readme](REDv1) 	| 4047 |       5       	| Single-label 	|  Sep 2021     	|
 | ![version](https://img.shields.io/badge/RED-v2-red) | [Data & Readme](REDv2)  | 5449 |       7       	|  Multi-label 	|  Jan 2022 	|
 
 REDv2 is based on REDv1, which is a smaller dataset, single-labeled with 5 emotions (Anger, Fear, Joy, Sadness and Neutral). REDv2 adds Trust and Surprise, bringing the number of annotated emotions to 7, in a multi-label fashion. 
