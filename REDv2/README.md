@@ -58,4 +58,15 @@ Script and results coming soon in [baseline](baseline).
 
 # Credits
 
-The REDv2 paper is under peer-review and will be published soon.
+```
+Ciobotaru, Alexandra, Mihai V. Constantinescu, Liviu P. Dinu, and Stefan Daniel Dumitrescu. "RED v2: Enhancing RED Dataset for Multi-Label Emotion Detection."
+```
+
+or in bibtex format:
+
+```
+@article{ciobotarured,
+  title={RED v2: Enhancing RED Dataset for Multi-Label Emotion Detection},
+  author={Ciobotaru, Alexandra and Constantinescu, Mihai V and Dinu, Liviu P and Dumitrescu, Stefan Daniel}
+}
+```
