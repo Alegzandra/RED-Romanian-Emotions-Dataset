@@ -72,14 +72,24 @@ We test the evaluation script in 2 settings (categorical and regression) with de
 # Credits
 
 ```
-Ciobotaru, Alexandra, Mihai V. Constantinescu, Liviu P. Dinu, and Stefan Daniel Dumitrescu. "RED v2: Enhancing RED Dataset for Multi-Label Emotion Detection."
+Ciobotaru, A., Constantinescu, M. V., Dinu, L. P., & Dumitrescu, S. D. (2022). RED v2: Enhancing RED Dataset for Multi-Label Emotion Detection. Proceedings of the 13th Language Resources and Evaluation Conference (LREC 2022), 1392–1399. http://www.lrec-conf.org/proceedings/lrec2022/pdf/2022.lrec-1.149.pdf
 ```
 
 or in bibtex format:
 
 ```
-@article{ciobotarured,
-  title={RED v2: Enhancing RED Dataset for Multi-Label Emotion Detection},
-  author={Ciobotaru, Alexandra and Constantinescu, Mihai V and Dinu, Liviu P and Dumitrescu, Stefan Daniel}
+@inproceedings{redv2,
+  author = "Alexandra Ciobotaru and
+               Mihai V. Constantinescu and
+               Liviu P. Dinu and
+               Stefan Daniel Dumitrescu",
+  title = "{RED} v2: {E}nhancing {RED} {D}ataset for {M}ulti-{L}abel {E}motion {D}etection",
+  journal = "Proceedings of the 13th Language Resources and Evaluation Conference (LREC 2022)",
+  pages = "1392–1399",
+  year = "2022",
+  address = "Marseille, France",
+  publisher = "European Language Resources Association (ELRA)",
+  url = "http://www.lrec-conf.org/proceedings/lrec2022/pdf/2022.lrec-1.149.pdf",
+  language = "English"
 }
 ```
