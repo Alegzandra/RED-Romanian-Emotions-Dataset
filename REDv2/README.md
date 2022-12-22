@@ -23,7 +23,7 @@ We provide REDv2 split in train/validation/test json files in the [data](data) f
 }
 ```
 
-The arrays of 7 values correspond to the following emotions: ``['Tristețe', 'Surpriză', 'Frică', 'Furie', 'Neutru', 'Încredere', 'Bucurie']``.
+The arrays of 7 values correspond to the following emotions: ``['Tristețe', 'Surpriză', 'Frică', 'Furie', 'Neutru', 'Încredere', 'Bucurie']`` (``['Sadness', 'Surprise', 'Fear', 'Anger', 'Neutral', 'Trust', 'Joy']``).
 
 For example:
 
