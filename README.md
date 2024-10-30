@@ -1,7 +1,9 @@
 
 # RED - Romanian Emotions Datasets
 
-The Romanian Emotions Dataset is a Twitter based dataset annotated with emotions. Currently there are 2 releases available:
+The Romanian Emotions Dataset is a Twitter based dataset annotated with emotions. 
+
+Currently there are **2 releases** available:
 
 
 |       	|      Link     	| # of tweets 	| # of emotions 	|  Annotation  	| Release Date 	|
