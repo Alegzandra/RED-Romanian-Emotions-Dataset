@@ -12,6 +12,15 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
+If any of the datasets provided in this repository are used in research articles 
+they must be cited accordingly:
+
+RED: [RED: A Novel Dataset for Romanian Emotion Detection from Tweets]
+(https://aclanthology.org/2021.ranlp-1.34/) (Ciobotaru & Dinu, RANLP 2021)
+
+REDv2: [RED v2: Enhancing RED Dataset for Multi-Label Emotion Detection]
+(https://aclanthology.org/2022.lrec-1.149/) (Ciobotaru et al., LREC 2022)
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
